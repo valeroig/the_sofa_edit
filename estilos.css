@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --color-fondo: #ecf0e6;
+    --color-verde: #96b6a3;
+    --color-gris: #858585;
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: #000000;
+}
+
+
+/*** header ***/
+nav{
+    display: none; 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 6.6em;
+}
+
+header .icono{
+    font-size: 3em;
+    color: #000000;
+}
+
+
+/*** hero ***/
+#hero{
+    height: 47vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(imgs/img_hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#hero h1{
+    color: #ffffff;
+    font-size: 3.6em;
+    font-weight: 700;
+}
+
+#hero p{
+    display: none;
+}
+
+
+/*** articles ***/
+#imagen_tablet, #article_desktop{
+    display: none;
+}
+
+.new_in{
+    display: none;
+}
+
+#articles{
+    padding: 3em 3.6em;
+    margin: 0 auto;
+    max-width: 768px;   
+}
+
+#articles article{
+    padding: 0.5em;
+    padding: 1.5em;
+    padding-bottom: 3em;
+    margin-bottom: 2em;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+#articles h2{
+    padding-top: 2.2em;
+    padding-bottom: 1.2em;
+    font-size: 1.7em;
+    font-weight: 600;
+    text-align: center;
+}
+
+#articles h3{
+    margin: 0.8em 0 0.3em 0;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+#articles p{
+    padding-bottom: 1.5em;
+}
+
+#articles article > img{     
+    width: 100%;
+    height: 38vh;
+    object-fit: cover;
+}
+
+.ver_mas{
+    color: #000000;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-bottom: 2px solid #000000;
+}
+
+
+/*** grilla ***/
+#calidad, #textura_rosa, #sofa_rosa{
+    display: none;
+}
+
+#grilla{
+    padding: 3em;
+    margin-bottom: 8em;
+}
+
+#grilla div img{
+    display: block;
+    object-fit: cover;
+    width: 100%;  
+    height: 20em;
+}
+
+#text_button{
+    background-color: #ffffff;
+    color: var(--color-gris);
+    height: 20em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.2em;
+}
+
+#text_button h3{
+    font-size: 2.1em;
+}
+
+#text_button a{
+    font-size: 0.9em;
+    font-weight: 500;
+    padding-top: 0.6em;
+    color: var(--color-gris);
+}
+
+
+/*** formulario ***/
+form{
+  background-color: var(--color-verde);
+  height: 30vh;
+  align-content: center;
+  text-align: center;
+}
+
+form h2{
+  padding: 1em 0em;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+form input{
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  width: 55%;
+  margin-bottom: 1.8em;
+  background-color: #f6f6f6;
+}
+
+form button{
+  background-color: #ffffff;
+  color: var(--color-verde);
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+
+/*** footer ***/
+footer{
+    color: #000000;
+    height: 20vh;
+    text-align: center;
+}
+
+footer h4{
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 2.5em 0 1em 0;
+}
+
+footer div img{
+    width: 3em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+
+/*** TABLET ***/
+@media all and (min-width: 768px){
+
+    /*** header ***/
+    #menu_hambur{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+
+    nav a{
+        color: #000000;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 1em;
+    }
+    
+    header nav a:last-of-type{
+        color: var(--color-gris);
+    }
+    
+    /*** hero ***/
+    #hero{
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: flex-end;
+        padding-left: 12em;
+        padding-bottom: 4em;
+    } 
+
+    #hero h1{
+        text-align: left;
+    }
+
+    #hero p{
+        display: block;
+        position: relative;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    /*** articles ***/
+    #imagen_tablet{
+        display: block;
+    }
+
+    #articles h2{
+        text-align: left;
+    }
+
+    #articles_tablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #articles_tablet article{
+        width: 48%;
+        margin-bottom: 1.5em;
+    }
+
+    /*** grilla ***/
+    #grilla{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #text_button{
+        grid-row: span 2;
+        height: auto;
+    } 
+    
+    #sofa_verde{
+        grid-row: 2 / 3;
+    }
+
+    #calidad{
+        display: block; 
+        background-color: var(--color-gris);
+        color: #ffffff;
+        height: 20em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        grid-column: span 2;
+    }
+
+    #calidad h3{
+        font-size: 2.1em;
+        padding-bottom: 0.2em;
+    }
+
+    #calidad p{
+        font-size: 1em;
+    }
+
+    /*** formulario ***/
+    form input{
+        width: 50%;
+    }
+
+}
+
+
+/*** DESKTOP ***/
+@media all and (min-width: 1200px){
+
+    /*** articles ***/
+    #article_desktop{
+        display: block;
+    }
+
+    #articles{
+        max-width: 1920px;
+    }
+
+    #articles article{
+        width: 32%;
+        position: relative;
+    }
+
+    #articles_tablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2em;
+    }
+
+    .new_in{
+        display: block;
+        background-color: var(--color-verde);
+        color: #ffffff;
+        position: absolute;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 0.5em 2em 0.5em 1em;
+        right: 0px;
+        top: 5em;
+    }
+
+    /*** grilla ***/
+    #textura_rosa, #sofa_rosa{
+        display: block;
+    }
+
+    #grilla{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #text_button{
+        grid-row: span 2;
+    }
+
+    #textura_rosa{
+        grid-column: 4 / 4;
+        grid-row: 2 / 2;
+    }
+
+    #sofa_rosa{
+        grid-column: 3 / 4;
+        grid-row: 2 / 2;
+    }
+
+    #sofa_verde {
+    grid-row: 2 / 2;
+    }
+
+    /*** hover ***/
+    header nav a:hover{
+        border-bottom: 0.1em solid #000000;
+    }
+
+    header nav a:last-of-type:hover{
+        border-bottom: 0.1em solid var(--color-gris);
+    }
+
+    .ver_mas:hover{
+        color: var(--color-gris);
+        border-bottom: 2px solid var(--color-gris);
+    }
+    
+    #text_button a:hover{
+        color: var(--color-verde);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
